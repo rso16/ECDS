@@ -34,6 +34,11 @@ MYSQL_RES MysqlHandler::executeSQL(char* sql)
 
 	mysql_query (connection, sql);
 	res_set=mysql_store_result(connection);
+	if(res_set == NULL)
+	{
+		printf("error\n");
+	}
+
 	return *res_set;
 }
 

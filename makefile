@@ -1,6 +1,6 @@
 OBJS = bin/main.o bin/Server.o bin/MysqlHandler.o bin/node.o bin/ECDH.o
 CC = g++
-CFLAGS = -Wall -c -I/usr/include/mysql -I/src/
+CFLAGS = -std=c++11 -Wall -c -I/usr/include/mysql -I/src/
 LFLAGS = -Wall -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lz -lm -lrt -latomic -ldl
 NAME = bin/server
 

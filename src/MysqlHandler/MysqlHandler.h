@@ -12,13 +12,13 @@
 // Defining 
 #define PI_BOX 0
 #define U_BOX 1
-#define BOX U_BOX
+#define BOX PI_BOX
 
 #if BOX == PI_BOX 
 	#define SERVER "localhost"
 	#define USER "Epaper"
 	#define PASSWORD "Display"
-	#define DATABASE "Test"
+	#define DATABASE "windesheim"
 #elif BOX == U_BOX
 	#define SERVER "localhost"
 	#define USER "root"
