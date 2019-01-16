@@ -18,10 +18,9 @@ char* ECDH::getRoomId(char *MAC)
 	printf("executing the following sql statement : %s\n", sqlStm);	
 	mHandler.connect(SERVER,USER,PASSWORD,DATABASE);
 	MYSQL_RES res = mHandler.executeSQL(sqlStm);
-	mHandler.printMysqlRes(&res);	
-			
+	//mHandler.printMysqlRes(&res);	
 	MYSQL_ROW row = mysql_fetch_row(&res);
-		
+	mHandler.close();		
 	return row[0];	
 }
 		
