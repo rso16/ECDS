@@ -1,7 +1,7 @@
 OBJS = bin/main.o bin/Server.o bin/MysqlHandler.o bin/node.o bin/ECDH.o
 CC = g++
 CFLAGS = -std=c++11 -Wall -c -I/usr/include/mysql -I/src/
-LFLAGS = -Wall -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lz -lm -lrt -latomic -ldl
+LFLAGS = -Wall -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lz -lm -lrt -latomic -ldl -lcurl
 NAME = bin/server
 
 
@@ -21,3 +21,6 @@ bin/node.o : src/node/node.c src/node/node.h
 	$(CC) $(CFLAGS) $(LFLAGS) src/node/node.c -o bin/node.o
 bin/ECDH.o : src/ECDH/ECDH.cpp src/ECDH/ECDH.h src/node/node.h src/MysqlHandler/MysqlHandler.h  
 	$(CC) $(CFLAGS) $(LFLAGS) src/ECDH/ECDH.cpp -o bin/ECDH.o
+bin/CurlHandler.o : src/CurlHandler/CurlHandler.cpp src/CurlHandler/CurlHandler.h src/node/node.h src/MysqlHandler/MysqlHandler.h  
+	$(CC) $(CFLAGS) $(LFLAGS) src/CurlHandler/CurlHandler.cpp -o bin/CurlHandler.o
+
