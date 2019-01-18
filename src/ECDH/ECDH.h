@@ -5,7 +5,6 @@
 #define ECDH_H
 
 //includes
-#include "../node/node.h"
 #include "../MysqlHandler/MysqlHandler.h"
 #include <iostream>
 #include <string>
@@ -17,6 +16,23 @@
 #define SQL_SIZE 53
 #define SQL_STM "select RID from Boards where MAC = "
 #define __STDC_FORMAT_MACROS
+
+//Defines 
+#define PI_BOX 0
+#define U_BOX 1
+#define BOX U_BOX
+
+#if BOX == PI_BOX 
+	#define SERVER "localhost"
+	#define USER "Epaper"
+	#define PASSWORD "Display"
+	#define DATABASE "windesheim"
+#elif BOX == U_BOX
+	#define SERVER "localhost"
+	#define USER "root"
+	#define PASSWORD ""
+	#define DATABASE "windesheim"
+#endif
 
 class ECDH
 {

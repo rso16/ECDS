@@ -3,7 +3,6 @@
 
 uint64_t ECDH::getMAC(char *serverRequest)
 {
-	printf("sr = %s\n", serverRequest);
 	std::string mac(serverRequest);
 	mac = mac.substr(0, 17);
 	printf("mac = %s\n", mac.c_str());
@@ -22,6 +21,7 @@ int ECDH::getRoomId(uint64_t MAC)
 	MYSQL_RES res = mHandler.executeSQL(sqlStm);
 	MYSQL_ROW row = mysql_fetch_row(&res);
 	mHandler.close();		
+	
 	if(row == NULL)
 	{
 		return NULL;

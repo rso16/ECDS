@@ -5,26 +5,8 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-
-// For MySQL Connection
 #include <mysql.h> 
 
-// Defining 
-#define PI_BOX 0
-#define U_BOX 1
-#define BOX U_BOX
-
-#if BOX == PI_BOX 
-	#define SERVER "localhost"
-	#define USER "Epaper"
-	#define PASSWORD "Display"
-	#define DATABASE "windesheim"
-#elif BOX == U_BOX
-	#define SERVER "localhost"
-	#define USER "root"
-	#define PASSWORD ""
-	#define DATABASE "windesheim"
-#endif
 
 
 class MysqlHandler
