@@ -1,29 +1,22 @@
 #include "ECDH.h"
 //made by R. S. Overhorst
 
-char* ECDH::getMAC(char *serverRequest)
+uint64_t ECDH::getMAC(char *serverRequest)
 {
-	nodeList *serverReq = (nodeList*) malloc(sizeof(nodeList));
-	char *macAddr = (char*) malloc(sizeof(char) * MAC_SIZE);
-	addStrToList(serverReq, serverRequest);
-	int err = listToStr(serverReq, macAddr, BEGIN_OF_MAC, MAC_SIZE);
-	printf("printing list : ");
-	printStrList(serverReq);	
-	printf("\nmacAddr = %s\n", macAddr);
-	
-	char *macAddrInt = (char*) malloc(sizeof(char) * 500);
-	std::string macStr = macAddr;
-	uint64_t temp = string_to_mac(macStr); 
-	sprintf(macAddrInt, "%" PRIu64 , temp);
-	printf("%s\n", macAddrInt);
-	return macAddrInt; 
+	printf("sr = %s\n", serverRequest);
+	std::string mac(serverRequest);
+	mac = mac.substr(0, 17);
+	printf("mac = %s\n", mac.c_str());
+	uint64_t macInt = string_to_mac(mac);
+	printf("macInt = %"PRIu64"\n", macInt); 
+	return macInt;
 }
 
-char* ECDH::getRoomId(char *MAC)
+char* ECDH::getRoomId(uint64_t MAC)
 {
 	MysqlHandler mHandler;
 	char *sqlStm = (char*) malloc(sizeof(char) * SQL_SIZE); 	
-	sprintf(sqlStm, "%s'%s'", SQL_STM, MAC);
+	sprintf(sqlStm, "%s'%"PRIu64"'", SQL_STM, MAC);
 	printf("executing the following sql statement : %s\n", sqlStm);	
 	mHandler.connect(SERVER,USER,PASSWORD,DATABASE);
 	MYSQL_RES res = mHandler.executeSQL(sqlStm);

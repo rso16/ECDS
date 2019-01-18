@@ -108,15 +108,15 @@ void addDataToList(nodeList *list, uint8_t data)
 
 void addStrToList(nodeList *list, char *str)
 {
-	printf("str = %s\n test", str);
+	printf("str = %s\n", str);
 	int index = 0;
 	while(str[index] != '\0')
 	{
-		printf("%c", str[index]);
+		printf("c = %c , index = %i\n", str[index], index);
 		addDataToList(list, str[index]);
 		index++;
 	}
-	printf("kut zon\n");	
+	printf("\n");	
 }
 
 void printNode(node *currentNode)
@@ -211,13 +211,14 @@ int listToStr(nodeList *list, char *str, int begin, int end)
 		
 	//prepare string for concatenation
 	strcpy(str, "\0");
-	
+	printf("testing testing");	
 	while(index < end)
 	{	
-		strcat(str,(char*) &temp->data);
+		strcat(str,(char*) temp->data);
+		printf("%c", temp->data);
 		temp = temp->next;
 		index++;
 	}
-
+	printf("str == %s", str);
 	return 1;
 }

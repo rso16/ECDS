@@ -17,13 +17,11 @@ int main(int argc, const char* argv[]) {
         char* data = server.getData(); 
 
 	printf("recieved = %s\n",data);
-	char *MAC_Addr = eHandler.getMAC(data);
-	printf("MAC address  = %s\n",MAC_Addr);
+	uint64_t MAC_Addr = eHandler.getMAC(data);
 	char *roomIdStr = (char*) malloc(sizeof(char) * 10);
 	roomIdStr = eHandler.getRoomId(MAC_Addr);
 	//printf("Room Id   = %s\n", roomId); 	 
 	int roomId = sscanf(roomIdStr, "%d", &roomId);	
-	//server.sendData(cHandler.getLessonInfo(roomId));
 	server.sendData(cHandler.getLessonInfo(roomId));
 
         server.disconnect();
