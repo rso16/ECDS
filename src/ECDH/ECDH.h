@@ -23,7 +23,7 @@ class ECDH
 	private:
 	public:
 		uint64_t getMAC(char *serverRequest);
-		char* getRoomId(uint64_t MAC);
+		int getRoomId(uint64_t MAC);
 		
 		//source = https://stackoverflow.com/questions/7326123/convert-mac-address-stdstring-into-uint64-t
 		uint64_t string_to_mac(std::string const& s);
