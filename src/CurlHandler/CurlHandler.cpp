@@ -1,31 +1,31 @@
 #include "CurlHandler.h"
 
 // ----------------------------------------------------------------------------
-// Global variables
-// ----------------------------------------------------------------------------
-std::string lessonName1;
-std::string lessonName2;
-std::string lessonTime1;
-std::string lessonTime2;
-std::string lessonTeachers1;
-std::string lessonTeachers2;
-std::string freeFrom;
-int lessonTimeArray[20][2];
-int lessonAmount;
-
-// ----------------------------------------------------------------------------
 // Functions
 // ----------------------------------------------------------------------------
+/**
+* @brief This function sets the classID
+* @retuns none
+* @note
+*/
+void CurlHandler::setClassId(int id)
+{
+	ClassID = id;	
+}
+
+
+
 /**
 * @brief This function retrieves & parses json
 * @retuns none
 * @note
 */
-void CurlHandler::getLessonInfo(){
-	std::string jsonBuffer = CurlHandler.curlRequest(ClassID);
-	CurlHandler.parseJson(&jsonBuffer);
-	CurlHandler.getFreeFrom();
-	CurlHandler.outputInfo();
+char* CurlHandler::getLessonInfo(int classID){
+ 	setClassId(classID);	
+	std::string jsonBuffer = curlRequest(classID);
+	parseJson(&jsonBuffer);
+	getFreeFrom();
+	return outputInfo();
 }
 
 /**
@@ -36,7 +36,7 @@ void CurlHandler::getLessonInfo(){
 std::string CurlHandler::curlRequest(int ID){
 	CURL *curl;
 	CURLcode res;
-	std::string URLString = CurlHandler.getCurlURL(ID);
+	std::string URLString = getCurlURL(ID);
 	std::string buffer;
 	//String to Char array
 	char * URL = new char [URLString.length()+1];
@@ -66,7 +66,7 @@ std::string CurlHandler::curlRequest(int ID){
 * @retuns
 * @note
 */
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp){
+size_t CurlHandler::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp){
 	((std::string*)userp)->append((char*)contents, size * nmemb);
 	return size * nmemb;
 }
@@ -77,8 +77,8 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
 * @note Needs a RoomID
 */
 std::string CurlHandler::getCurlURL(int ID){
-	std::string Date = CurlHandler.getDateField();
-	std::string RoomID = CurlHandler.getIdField(ID);
+	std::string Date = getDateField();
+	std::string RoomID = getIdField(ID);
 	std::string URL = BaseURL + RequestClassData + Date + RoomID;
 	return URL;
 }
@@ -90,7 +90,7 @@ std::string CurlHandler::getCurlURL(int ID){
 */
 std::string CurlHandler::getDateField(){
 	std::ostringstream streamDate;
-	streamDate << "date=" << CurlHandler.getDate() << "&";
+	streamDate << "date=" << getDate() << "&";
 	std::string Date(streamDate.str());
 	return Date;
 }
@@ -133,30 +133,30 @@ void CurlHandler::parseJson(std::string* buffer){
 	reader.parse(*buffer, obj); // reader can also read strings
    	const Json::Value& characters = obj["result"]["data"]["elementPeriods"][std::to_string(ClassID)]; // array of characters
 	for (int i = 0; i < characters.size(); i++){
-		if(characters[i]["date"].asString() == CurlHandler.getDate()){
-			if(characters[i]["endTime"].asInt() > CurlHandler.getCurrentTime()){
+		if(characters[i]["date"].asString() == getDate()){
+			if(characters[i]["endTime"].asInt() > getCurrentTime()){
 				if(lessonId != characters[i]["lessonId"].asInt()){
 					if(characters[i]["startTime"].asInt() < lessonTimeArray[1][1] || lessonTimeArray[1][1] == 0){
 						lessonAmount++;
-						CurlHandler.moveLessonTimes(1);
+						moveLessonTimes(1);
 						lessonId	= characters[i]["lessonId"].asInt();
 						lessonName1	= characters[i]["lessonText"].asString();	//set lessonName1
-						lessonTime1	= CurlHandler.getLessonTime(obj, lessonId, 1);		//set lessonTime1
-						lessonTeachers1	= CurlHandler.getLessonTeachers(obj, i);			//set lessonTeachers1
+						lessonTime1	= getLessonTime(obj, lessonId, 1);		//set lessonTime1
+						lessonTeachers1	= getLessonTeachers(obj, i);			//set lessonTeachers1
 					} else if(characters[i]["startTime"].asInt() < lessonTimeArray[2][1] || lessonTimeArray[2][1] == 0){
 						lessonAmount++;
-						CurlHandler.moveLessonTimes(2);
+						moveLessonTimes(2);
 						lessonId	= characters[i]["lessonId"].asInt();
 						lessonName2	= characters[i]["lessonText"].asString();	//set lessonName1
-						lessonTime2	= CurlHandler.getLessonTime(obj, lessonId, 2);		//set lessonTime1
-						lessonTeachers2 = CurlHandler.getLessonTeachers(obj, i);			//set lessonTeachers1
+						lessonTime2	= getLessonTime(obj, lessonId, 2);		//set lessonTime1
+						lessonTeachers2 = getLessonTeachers(obj, i);			//set lessonTeachers1
 					} else {
 						for(int j = 3; j > lessonAmount; j++){
 							if(characters[i]["startTime"].asInt() < lessonTimeArray[j][1] || lessonTimeArray[j][1] == 0){
 								lessonAmount++;
-								CurlHandler.moveLessonTimes(j);
+								moveLessonTimes(j);
 								lessonId = characters[i]["lessonId"].asInt();
-								CurlHandler.getLessonTime(obj, characters[i]["lessonId"].asInt(), j);
+								getLessonTime(obj, characters[i]["lessonId"].asInt(), j);
 								break;
 							}
 						}
@@ -219,7 +219,7 @@ std::string CurlHandler::getLessonTime(Json::Value obj, int lessonId, int lesson
 	}
 	lessonTimeArray[lesson][1] = startTime;
 	lessonTimeArray[lesson][2] = endTime;
-	return CurlHandler.formatFullTime(std::to_string(startTime), std::to_string(endTime));
+	return formatFullTime(std::to_string(startTime), std::to_string(endTime));
 }
 
 /**
@@ -243,7 +243,7 @@ std::string CurlHandler::formatTime(std::string time){
 	timeStream << std::setw(4) << std::setfill('0') << time;
 	std::string formattedTime = timeStream.str();
 	formattedTime.insert(2,":");
-	return CurlHandler.formattedTime;
+	return formattedTime;
 }
 
 /**
@@ -308,8 +308,8 @@ void CurlHandler::getFreeFrom(){
 * @retuns none
 * @note
 */
-*char  CurlHandler::outputInfo(){
-	char *ret = (char *) malloc(sizeof(char) * BUFFER_SIZE):
-	sprintf(ret, "%s;%s;%s;%s;%s;%s;%s;", lessonTime1, lessonTime2, lessonName1, lessonName2, lessonTeachers1, lessonTeachers, freeFrom); 
+char *CurlHandler::outputInfo(){
+	char *ret = (char *) malloc(sizeof(char) * BUFFER_SIZE);
+	sprintf(ret, "%s;%s;%s;%s;%s;%s;%s;", lessonTime1.c_str(), lessonTime2.c_str(), lessonName1.c_str(), lessonName2.c_str(), lessonTeachers1.c_str(), lessonTeachers2.c_str(), freeFrom.c_str()); 
 	return ret;
 }

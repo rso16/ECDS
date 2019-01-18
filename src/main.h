@@ -8,6 +8,7 @@
 #include <string.h>
 #include "MysqlHandler/MysqlHandler.h"
 #include "ECDH/ECDH.h"
+#include "CurlHandler/CurlHandler.h"
 
 #if defined(_WIN32)
 	#include <winsock2.h>
@@ -21,5 +22,6 @@
 MysqlHandler mHandler;
 ECDH eHandler;
 Server server;
+CurlHandler cHandler;
 
 #endif

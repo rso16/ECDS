@@ -7,14 +7,16 @@ char* ECDH::getMAC(char *serverRequest)
 	char *macAddr = (char*) malloc(sizeof(char) * MAC_SIZE);
 	addStrToList(serverReq, serverRequest);
 	int err = listToStr(serverReq, macAddr, BEGIN_OF_MAC, MAC_SIZE);
-	printf("%s\n", macAddr);
+	printf("printing list : ");
+	printStrList(serverReq);	
+	printf("\nmacAddr = %s\n", macAddr);
 	
 	char *macAddrInt = (char*) malloc(sizeof(char) * 500);
 	std::string macStr = macAddr;
 	uint64_t temp = string_to_mac(macStr); 
 	sprintf(macAddrInt, "%" PRIu64 , temp);
 	printf("%s\n", macAddrInt);
-	return macAddrInt;	
+	return macAddrInt; 
 }
 
 char* ECDH::getRoomId(char *MAC)
@@ -24,8 +26,7 @@ char* ECDH::getRoomId(char *MAC)
 	sprintf(sqlStm, "%s'%s'", SQL_STM, MAC);
 	printf("executing the following sql statement : %s\n", sqlStm);	
 	mHandler.connect(SERVER,USER,PASSWORD,DATABASE);
-	//MYSQL_RES res = mHandler.executeSQL(sqlStm);
-	MYSQL_RES res = mHandler.executeSQL("select RID from Boards where MAC = '20005414719302';");
+	MYSQL_RES res = mHandler.executeSQL(sqlStm);
 	//mHandler.printMysqlRes(&res);	
 	MYSQL_ROW row = mysql_fetch_row(&res);
 	mHandler.close();		

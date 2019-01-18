@@ -1,3 +1,7 @@
+#ifndef CURLHANDLER_H
+#define CURLHANDLER_H
+
+
 /******************************************************************************
  * File : scheduel_handeler.h
  ******************************************************************************/
@@ -13,18 +17,31 @@
 #include <curl/curl.h>
 #include <jsoncpp/json/json.h>
 
-/* Constants -----------------------------------------------------------------*/
+
+/* Defines -----------------------------------------------------------------*/
 #define BUFFER_SIZE 500
 
 /* Constants -----------------------------------------------------------------*/
 const std::string BaseURL = "https://roostertest.windesheim.nl/WebUntis/Timetable.do?request.preventCache=1543327601812&";
 const std::string RequestClassData = "ajaxCommand=getWeeklyTimetable&elementType=4&departmentId=0&filterId=2&";
-const int ClassID = 328;
 
 /* Classes -------------------------------------------------------------------*/
 class CurlHandler{	
+	private:
+		std::string lessonName1;
+		std::string lessonName2;
+		std::string lessonTime1;
+		std::string lessonTime2;
+		std::string lessonTeachers1;
+		std::string lessonTeachers2;
+		std::string freeFrom;
+		int lessonTimeArray[20][2];
+		int lessonAmount;
+		int ClassID;	
+		void setClassId(int Id);	
+	
 	public:
-		void getLessonInfo();
+		char* getLessonInfo(int classId);
 		std::string curlRequest(int ID);
 		static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
 		std::string getCurlURL(int ID);
@@ -39,4 +56,7 @@ class CurlHandler{
 		std::string formatTime(std::string time);
 		std::string getLessonTeachers(Json::Value obj, int i);
 		void getFreeFrom();
+		char* outputInfo();
 };
+
+#endif

@@ -12,7 +12,7 @@
 // Defining 
 #define PI_BOX 0
 #define U_BOX 1
-#define BOX PI_BOX
+#define BOX U_BOX
 
 #if BOX == PI_BOX 
 	#define SERVER "localhost"
@@ -23,7 +23,7 @@
 	#define SERVER "localhost"
 	#define USER "root"
 	#define PASSWORD ""
-	#define DATABASE "test_db"
+	#define DATABASE "windesheim"
 #endif
 
 

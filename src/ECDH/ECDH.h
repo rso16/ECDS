@@ -13,7 +13,7 @@
 
 //defines
 #define BEGIN_OF_MAC 0
-#define MAC_SIZE 17
+#define MAC_SIZE 18
 #define SQL_SIZE 53
 #define SQL_STM "select RID from Boards where MAC = "
 #define __STDC_FORMAT_MACROS

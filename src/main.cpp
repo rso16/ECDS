@@ -19,11 +19,12 @@ int main(int argc, const char* argv[]) {
 	printf("recieved = %s\n",data);
 	char *MAC_Addr = eHandler.getMAC(data);
 	printf("MAC address  = %s\n",MAC_Addr);
-	char *roomId = (char*) malloc(sizeof(char) * 10);
-	roomId = eHandler.getRoomId(MAC_Addr);
-	printf("test\n");			
-	//printf("Room Id   = %s\n", roomId);
-        server.sendData(roomId);
+	char *roomIdStr = (char*) malloc(sizeof(char) * 10);
+	roomIdStr = eHandler.getRoomId(MAC_Addr);
+	//printf("Room Id   = %s\n", roomId); 	 
+	int roomId = sscanf(roomIdStr, "%d", &roomId);	
+	//server.sendData(cHandler.getLessonInfo(roomId));
+	server.sendData(cHandler.getLessonInfo(roomId));
 
         server.disconnect();
     }

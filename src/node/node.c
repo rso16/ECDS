@@ -108,12 +108,15 @@ void addDataToList(nodeList *list, uint8_t data)
 
 void addStrToList(nodeList *list, char *str)
 {
+	printf("str = %s\n test", str);
 	int index = 0;
 	while(str[index] != '\0')
 	{
+		printf("%c", str[index]);
 		addDataToList(list, str[index]);
 		index++;
-	}	
+	}
+	printf("kut zon\n");	
 }
 
 void printNode(node *currentNode)
@@ -165,7 +168,7 @@ void printStrList(nodeList *list)
                 counter++;
                 currentNode = currentNode->next;
             }
-            printf("\n");
+            printf("test\n");
         }
         else
         {
