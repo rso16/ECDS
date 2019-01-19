@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.19)  19 JAN 2019 21:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.19)  19 JAN 2019 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1550,28 +1550,98 @@ File: classServer__coll__graph.pdf Graphic file (type pdf)
 <use classServer__coll__graph.pdf>
 Package pdftex.def Info: classServer__coll__graph.pdf  used on input line 13.
 (pdftex.def)             Requested size: 159.0pt x 204.0021pt.
- [17] [18 <./classServer__coll__graph.pdf>]) [19] [20
+ [17] [18 <./classServer__coll__graph.pdf>]
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+[19]
+Underfull \hbox (badness 10000) detected at line 118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 121
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 134
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 150
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+[20]) [21] [22
 
 ]
 Chapter 5.
 (./CurlHandler_8cpp.tex
-<CurlHandler_8cpp__incl.pdf, id=734, 719.68875pt x 234.8775pt>
+<CurlHandler_8cpp__incl.pdf, id=744, 719.68875pt x 234.8775pt>
 File: CurlHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use CurlHandler_8cpp__incl.pdf>
 Package pdftex.def Info: CurlHandler_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 114.22725pt.
 ) (./CurlHandler_8h.tex
-<CurlHandler_8h__incl.pdf, id=735, 719.68875pt x 178.6675pt>
+<CurlHandler_8h__incl.pdf, id=745, 719.68875pt x 178.6675pt>
 File: CurlHandler_8h__incl.pdf Graphic file (type pdf)
 <use CurlHandler_8h__incl.pdf>
 Package pdftex.def Info: CurlHandler_8h__incl.pdf  used on input line 16.
 (pdftex.def)             Requested size: 350.0pt x 86.89081pt.
-<CurlHandler_8h__dep__incl.pdf, id=736, 327.2225pt x 268.00125pt>
+<CurlHandler_8h__dep__incl.pdf, id=746, 327.2225pt x 268.00125pt>
 File: CurlHandler_8h__dep__incl.pdf Graphic file (type pdf)
 <use CurlHandler_8h__dep__incl.pdf>
 Package pdftex.def Info: CurlHandler_8h__dep__incl.pdf  used on input line 23.
 (pdftex.def)             Requested size: 326.0pt x 266.99867pt.
- [21 <./CurlHandler_8cpp__incl.pdf> <./CurlHandler_8h__incl.pdf
+ [23 <./CurlHandler_8cpp__incl.pdf> <./CurlHandler_8h__incl.pdf
 
 pdfTeX warning: pdflatex (file ./CurlHandler_8h__incl.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
@@ -1581,96 +1651,96 @@ Underfull \hbox (badness 756) in paragraph at lines 39--41
 st.[]windesheim.[]nl/Web[]Untis/Timetable.[]do?request.[]prevent[]
  []
 
-[22 <./CurlHandler_8h__dep__incl.pdf>]) (./ECDH_8cpp.tex
-<ECDH_8cpp__incl.pdf, id=777, 430.60875pt x 280.04625pt>
+[24 <./CurlHandler_8h__dep__incl.pdf>]) (./ECDH_8cpp.tex
+<ECDH_8cpp__incl.pdf, id=787, 430.60875pt x 280.04625pt>
 File: ECDH_8cpp__incl.pdf Graphic file (type pdf)
 <use ECDH_8cpp__incl.pdf>
 Package pdftex.def Info: ECDH_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 227.62674pt.
 ) (./ECDH_8h.tex
-<ECDH_8h__incl.pdf, id=778, 430.60875pt x 223.83624pt>
+<ECDH_8h__incl.pdf, id=788, 430.60875pt x 223.83624pt>
 File: ECDH_8h__incl.pdf Graphic file (type pdf)
 <use ECDH_8h__incl.pdf>
 Package pdftex.def Info: ECDH_8h__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 350.0pt x 181.93822pt.
 
-[23 <./ECDH_8cpp__incl.pdf>]
-<ECDH_8h__dep__incl.pdf, id=790, 355.3275pt x 245.91875pt>
+[25 <./ECDH_8cpp__incl.pdf>]
+<ECDH_8h__dep__incl.pdf, id=801, 355.3275pt x 245.91875pt>
 File: ECDH_8h__dep__incl.pdf Graphic file (type pdf)
 <use ECDH_8h__dep__incl.pdf>
 Package pdftex.def Info: ECDH_8h__dep__incl.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 242.24077pt.
- [24 <./ECDH_8h__incl.pdf> <./ECDH_8h__dep__incl.pdf
+ [26 <./ECDH_8h__incl.pdf> <./ECDH_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./ECDH_8h__dep__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
->] [25]) (./main_8cpp.tex
-<main_8cpp__incl.pdf, id=843, 1172.38pt x 336.25626pt>
+>] [27]) (./main_8cpp.tex
+<main_8cpp__incl.pdf, id=853, 1172.38pt x 336.25626pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 <use main_8cpp__incl.pdf>
 Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 100.38509pt.
- [26]) (./main_8h.tex
-<main_8h__incl.pdf, id=849, 1172.38pt x 280.04625pt>
+ [28]) (./main_8h.tex
+<main_8h__incl.pdf, id=859, 1172.38pt x 280.04625pt>
 File: main_8h__incl.pdf Graphic file (type pdf)
 <use main_8h__incl.pdf>
 Package pdftex.def Info: main_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 350.0pt x 83.6043pt.
-<main_8h__dep__incl.pdf, id=850, 188.705pt x 178.6675pt>
+<main_8h__dep__incl.pdf, id=860, 188.705pt x 178.6675pt>
 File: main_8h__dep__incl.pdf Graphic file (type pdf)
 <use main_8h__dep__incl.pdf>
 Package pdftex.def Info: main_8h__dep__incl.pdf  used on input line 22.
 (pdftex.def)             Requested size: 188.0pt x 177.99911pt.
- [27 <./main_8cpp__incl.pdf> <./main_8h__incl.pdf
+ [29 <./main_8cpp__incl.pdf> <./main_8h__incl.pdf
 
 pdfTeX warning: pdflatex (file ./main_8h__incl.pdf): PDF inclusion: multiple pd
 fs with page group included in a single page
->] [28 <./main_8h__dep__incl.pdf>]) (./MysqlHandler_8cpp.tex
-<MysqlHandler_8cpp__incl.pdf, id=901, 329.23pt x 234.8775pt>
+>] [30 <./main_8h__dep__incl.pdf>]) (./MysqlHandler_8cpp.tex
+<MysqlHandler_8cpp__incl.pdf, id=911, 329.23pt x 234.8775pt>
 File: MysqlHandler_8cpp__incl.pdf Graphic file (type pdf)
 <use MysqlHandler_8cpp__incl.pdf>
 Package pdftex.def Info: MysqlHandler_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 328.0pt x 234.00601pt.
 )
 (./MysqlHandler_8h.tex
-<MysqlHandler_8h__incl.pdf, id=902, 329.23pt x 178.6675pt>
+<MysqlHandler_8h__incl.pdf, id=912, 329.23pt x 178.6675pt>
 File: MysqlHandler_8h__incl.pdf Graphic file (type pdf)
 <use MysqlHandler_8h__incl.pdf>
 Package pdftex.def Info: MysqlHandler_8h__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 328.0pt x 178.00456pt.
- [29 <./MysqlHandler_8cpp__incl.pdf>]
-<MysqlHandler_8h__dep__incl.pdf, id=914, 457.71pt x 335.2525pt>
+ [31 <./MysqlHandler_8cpp__incl.pdf>]
+<MysqlHandler_8h__dep__incl.pdf, id=925, 457.71pt x 335.2525pt>
 File: MysqlHandler_8h__dep__incl.pdf Graphic file (type pdf)
 <use MysqlHandler_8h__dep__incl.pdf>
 Package pdftex.def Info: MysqlHandler_8h__dep__incl.pdf  used on input line 18.
 
 (pdftex.def)             Requested size: 350.0pt x 256.37013pt.
 ) (./Server_8cpp.tex
-<Server_8cpp__incl.pdf, id=916, 330.23375pt x 223.83624pt>
+<Server_8cpp__incl.pdf, id=927, 330.23375pt x 223.83624pt>
 File: Server_8cpp__incl.pdf Graphic file (type pdf)
 <use Server_8cpp__incl.pdf>
 Package pdftex.def Info: Server_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 329.0pt x 223.00914pt.
-[30 <./MysqlHandler_8h__incl.pdf> <./MysqlHandler_8h__dep__incl.pdf
+[32 <./MysqlHandler_8h__incl.pdf> <./MysqlHandler_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./MysqlHandler_8h__dep__incl.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]) (./Server_8h.tex
-<Server_8h__incl.pdf, id=935, 330.23375pt x 167.62625pt>
+<Server_8h__incl.pdf, id=946, 330.23375pt x 167.62625pt>
 File: Server_8h__incl.pdf Graphic file (type pdf)
 <use Server_8h__incl.pdf>
 Package pdftex.def Info: Server_8h__incl.pdf  used on input line 11.
 (pdftex.def)             Requested size: 329.0pt x 167.00684pt.
-<Server_8h__dep__incl.pdf, id=936, 353.32pt x 245.91875pt>
+<Server_8h__dep__incl.pdf, id=947, 353.32pt x 245.91875pt>
 File: Server_8h__dep__incl.pdf Graphic file (type pdf)
 <use Server_8h__dep__incl.pdf>
 Package pdftex.def Info: Server_8h__dep__incl.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 243.6104pt.
- [31 <./Server_8cpp__incl.pdf> <./Server_8h__incl.pdf
+ [33 <./Server_8cpp__incl.pdf> <./Server_8h__incl.pdf
 
 pdfTeX warning: pdflatex (file ./Server_8h__incl.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
->]) [32 <./Server_8h__dep__incl.pdf>] (./refman.ind
+>]) [34 <./Server_8h__dep__incl.pdf>] (./refman.ind
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 []\T1/phv/m/n/10 /home/rso16/projects/[]E[]C[]D[]S/src/[]Curl[]Handler/[]Curl[]
 
@@ -1694,11 +1764,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--15
 []
  []
 
-[33
+[35
 
 
 
-] [34])
+] [36])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
  (./refman.aux)
@@ -1709,8 +1779,8 @@ Package rerunfilecheck Info: File `refman.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15305 strings out of 492982
- 221820 string characters out of 6134896
+ 15307 strings out of 492982
+ 221834 string characters out of 6134896
  318803 words of memory out of 5000000
  18337 multiletter control sequences out of 15000+600000
  64764 words of font info for 90 fonts, out of 8000000 for 9000
@@ -1728,10 +1798,10 @@ r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (40 pages, 245868 bytes).
+Output written on refman.pdf (42 pages, 247493 bytes).
 PDF statistics:
- 1188 PDF objects out of 1200 (max. 8388607)
- 1085 compressed objects within 11 object streams
- 232 named destinations out of 1000 (max. 500000)
+ 1198 PDF objects out of 1200 (max. 8388607)
+ 1093 compressed objects within 11 object streams
+ 234 named destinations out of 1000 (max. 500000)
  816 words of extra memory for PDF output out of 10000 (max. 10000000)
 
