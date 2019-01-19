@@ -77,12 +77,16 @@ Collaboration diagram for MysqlHandler:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acd74d4ee6a2853d07218cd7a300ee6d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMysqlHandler.html#acd74d4ee6a2853d07218cd7a300ee6d2">connect</a> (char *<a class="el" href="main_8h.html#afd1a82c786509e03b540bae82af2c137">server</a>, char *user, char *pass, char *db_name)</td></tr>
+<tr class="memdesc:acd74d4ee6a2853d07218cd7a300ee6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">connects to the db-server.  <a href="#acd74d4ee6a2853d07218cd7a300ee6d2">More...</a><br /></td></tr>
 <tr class="separator:acd74d4ee6a2853d07218cd7a300ee6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abee4d47196df8c42420fe771508a6ff9"><td class="memItemLeft" align="right" valign="top">MYSQL_RES&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMysqlHandler.html#abee4d47196df8c42420fe771508a6ff9">executeSQL</a> (char *sql)</td></tr>
+<tr class="memdesc:abee4d47196df8c42420fe771508a6ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the SQL query.  <a href="#abee4d47196df8c42420fe771508a6ff9">More...</a><br /></td></tr>
 <tr class="separator:abee4d47196df8c42420fe771508a6ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affb80fba704894dca83d563f6582edc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMysqlHandler.html#affb80fba704894dca83d563f6582edc0">printMysqlRes</a> (MYSQL_RES *res_set)</td></tr>
+<tr class="memdesc:affb80fba704894dca83d563f6582edc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the result of the query.  <a href="#affb80fba704894dca83d563f6582edc0">More...</a><br /></td></tr>
 <tr class="separator:affb80fba704894dca83d563f6582edc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef277d872eb51db9ce2fe66fed348941"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMysqlHandler.html#aef277d872eb51db9ce2fe66fed348941">close</a> ()</td></tr>
+<tr class="memdesc:aef277d872eb51db9ce2fe66fed348941"><td class="mdescLeft">&#160;</td><td class="mdescRight">closes the connection with the db-server  <a href="#aef277d872eb51db9ce2fe66fed348941">More...</a><br /></td></tr>
 <tr class="separator:aef277d872eb51db9ce2fe66fed348941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -100,6 +104,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>closes the connection with the db-server </p>
+<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Error checking not yet added! </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
 
 </div>
 </div>
@@ -141,6 +150,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>connects to the db-server. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if succesfull, -1 if the initialization failed &amp; -2 if connection failed. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
+
 </div>
 </div>
 <a id="abee4d47196df8c42420fe771508a6ff9"></a>
@@ -159,6 +172,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Executes the SQL query. </p>
+<dl class="section return"><dt>Returns</dt><dd>The Results of the query. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
+
 </div>
 </div>
 <a id="affb80fba704894dca83d563f6582edc0"></a>
@@ -176,6 +193,11 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints the result of the query. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Error checking not yet added! </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
 
 </div>
 </div>

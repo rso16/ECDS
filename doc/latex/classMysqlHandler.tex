@@ -17,13 +17,13 @@ Collaboration diagram for Mysql\+Handler\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{classMysqlHandler_acd74d4ee6a2853d07218cd7a300ee6d2}{connect} (char $\ast$\hyperlink{main_8h_afd1a82c786509e03b540bae82af2c137}{server}, char $\ast$user, char $\ast$pass, char $\ast$db\+\_\+name)
-\item 
+\begin{DoxyCompactList}\small\item\em connects to the db-\/server. \end{DoxyCompactList}\item 
 M\+Y\+S\+Q\+L\+\_\+\+R\+ES \hyperlink{classMysqlHandler_abee4d47196df8c42420fe771508a6ff9}{execute\+S\+QL} (char $\ast$sql)
-\item 
+\begin{DoxyCompactList}\small\item\em Executes the S\+QL query. \end{DoxyCompactList}\item 
 int \hyperlink{classMysqlHandler_affb80fba704894dca83d563f6582edc0}{print\+Mysql\+Res} (M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$res\+\_\+set)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the result of the query. \end{DoxyCompactList}\item 
 int \hyperlink{classMysqlHandler_aef277d872eb51db9ce2fe66fed348941}{close} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em closes the connection with the db-\/server \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
@@ -33,24 +33,70 @@ int \hyperlink{classMysqlHandler_aef277d872eb51db9ce2fe66fed348941}{close} ()
 \subsubsection{\texorpdfstring{close()}{close()}}
 {\footnotesize\ttfamily int Mysql\+Handler\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+closes the connection with the db-\/server 
+
+\begin{DoxyReturn}{Returns}
+1 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Error checking not yet added! 
+\end{DoxyWarning}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classMysqlHandler_acd74d4ee6a2853d07218cd7a300ee6d2}\label{classMysqlHandler_acd74d4ee6a2853d07218cd7a300ee6d2}} 
 \index{Mysql\+Handler@{Mysql\+Handler}!connect@{connect}}
 \index{connect@{connect}!Mysql\+Handler@{Mysql\+Handler}}
 \subsubsection{\texorpdfstring{connect()}{connect()}}
 {\footnotesize\ttfamily int Mysql\+Handler\+::connect (\begin{DoxyParamCaption}\item[{char $\ast$}]{server,  }\item[{char $\ast$}]{user,  }\item[{char $\ast$}]{pass,  }\item[{char $\ast$}]{db\+\_\+name }\end{DoxyParamCaption})}
 
+
+
+connects to the db-\/server. 
+
+\begin{DoxyReturn}{Returns}
+1 if succesfull, -\/1 if the initialization failed \& -\/2 if connection failed. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classMysqlHandler_abee4d47196df8c42420fe771508a6ff9}\label{classMysqlHandler_abee4d47196df8c42420fe771508a6ff9}} 
 \index{Mysql\+Handler@{Mysql\+Handler}!execute\+S\+QL@{execute\+S\+QL}}
 \index{execute\+S\+QL@{execute\+S\+QL}!Mysql\+Handler@{Mysql\+Handler}}
 \subsubsection{\texorpdfstring{execute\+S\+Q\+L()}{executeSQL()}}
 {\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES Mysql\+Handler\+::execute\+S\+QL (\begin{DoxyParamCaption}\item[{char $\ast$}]{sql }\end{DoxyParamCaption})}
 
+
+
+Executes the S\+QL query. 
+
+\begin{DoxyReturn}{Returns}
+The Results of the query. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classMysqlHandler_affb80fba704894dca83d563f6582edc0}\label{classMysqlHandler_affb80fba704894dca83d563f6582edc0}} 
 \index{Mysql\+Handler@{Mysql\+Handler}!print\+Mysql\+Res@{print\+Mysql\+Res}}
 \index{print\+Mysql\+Res@{print\+Mysql\+Res}!Mysql\+Handler@{Mysql\+Handler}}
 \subsubsection{\texorpdfstring{print\+Mysql\+Res()}{printMysqlRes()}}
 {\footnotesize\ttfamily int Mysql\+Handler\+::print\+Mysql\+Res (\begin{DoxyParamCaption}\item[{M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$}]{res\+\_\+set }\end{DoxyParamCaption})}
 
+
+
+Prints the result of the query. 
+
+\begin{DoxyReturn}{Returns}
+1 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Error checking not yet added! 
+\end{DoxyWarning}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
