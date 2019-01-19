@@ -1,0 +1,261 @@
+\hypertarget{classCurlHandler}{}\section{Curl\+Handler Class Reference}
+\label{classCurlHandler}\index{Curl\+Handler@{Curl\+Handler}}
+
+
+{\ttfamily \#include $<$Curl\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classCurlHandler_a8f82086fdc6993eb9068a25632652fb0}{get\+Lesson\+Info} (int class\+Id)
+\begin{DoxyCompactList}\small\item\em This function retrieves \& parses json  none. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_a3b115e8ef11a96743b49797b4025b3a0}{curl\+Request} (int ID)
+\begin{DoxyCompactList}\small\item\em This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID.  none. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}{get\+Curl\+U\+RL} (int ID)
+\begin{DoxyCompactList}\small\item\em This function creates the curl request U\+RL with Date \& Room\+ID.  String of U\+RL. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_a021967e447f8980a4629b85cc3683a93}{get\+Date\+Field} ()
+\begin{DoxyCompactList}\small\item\em This function creates Date part of the curl request U\+RL.  String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\&. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}{get\+Date} ()
+\begin{DoxyCompactList}\small\item\em This function returns current date.  String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_a26d8a6f384d54fd7af70fde33232531a}{get\+Id\+Field} (int ID)
+\begin{DoxyCompactList}\small\item\em This function creates Room\+ID part of the curl request U\+RL.  String with Room\+ID in following format\+: element\+Id=Room\+ID. \end{DoxyCompactList}\item 
+void \hyperlink{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}{parse\+Json} (std\+::string $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em This function parses json and saves lesson data  none. \end{DoxyCompactList}\item 
+int \hyperlink{classCurlHandler_a54e7bc698682a0b313b3de0f6d2c7cf4}{get\+Current\+Time} ()
+\begin{DoxyCompactList}\small\item\em This function returns current time  int with hour and minutes in following format\+: H\+H\+MM. \end{DoxyCompactList}\item 
+void \hyperlink{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}{move\+Lesson\+Times} (int lesson)
+\begin{DoxyCompactList}\small\item\em This function moves\+Lesson\+Times  None. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}{get\+Lesson\+Time} (Json\+::\+Value obj, int lesson\+Id, int lesson)
+\begin{DoxyCompactList}\small\item\em This function gets the end\+Time of a lesson and returns lessontime  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_ae208efd8422979786ee921c5148b17c7}{format\+Full\+Time} (std\+::string start\+Time, std\+::string end\+Time)
+\begin{DoxyCompactList}\small\item\em This function merges start\+Time \& end\+Time String into single formatted string  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}{format\+Time} (std\+::string time)
+\begin{DoxyCompactList}\small\item\em This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM  String with times in following format\+: HH\+:MM. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}{get\+Lesson\+Teachers} (Json\+::\+Value obj, int i)
+\begin{DoxyCompactList}\small\item\em This function gets the teachers from a lesson  String with teacher(s) of a lesson. \end{DoxyCompactList}\item 
+void \hyperlink{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}{get\+Free\+From} ()
+\begin{DoxyCompactList}\small\item\em This function calculates when the room is free  none. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classCurlHandler_a5d840e40c7e2d11297514947e957d542}{output\+Info} ()
+\begin{DoxyCompactList}\small\item\em Outputs Lesson info in used format  none. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \hyperlink{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}{Write\+Callback} (void $\ast$contents, size\+\_\+t size, size\+\_\+t nmemb, void $\ast$userp)
+\begin{DoxyCompactList}\small\item\em This function is used by curl\+Request as Write\+Callback . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCurlHandler_a3b115e8ef11a96743b49797b4025b3a0}\label{classCurlHandler_a3b115e8ef11a96743b49797b4025b3a0}} 
+\index{Curl\+Handler@{Curl\+Handler}!curl\+Request@{curl\+Request}}
+\index{curl\+Request@{curl\+Request}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{curl\+Request()}{curlRequest()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::curl\+Request (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID.  none. 
+
+\begin{DoxyNote}{Note}
+needs a pointer to a string buffer \& Room\+ID int 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_ae208efd8422979786ee921c5148b17c7}\label{classCurlHandler_ae208efd8422979786ee921c5148b17c7}} 
+\index{Curl\+Handler@{Curl\+Handler}!format\+Full\+Time@{format\+Full\+Time}}
+\index{format\+Full\+Time@{format\+Full\+Time}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{format\+Full\+Time()}{formatFullTime()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::format\+Full\+Time (\begin{DoxyParamCaption}\item[{std\+::string}]{start\+Time,  }\item[{std\+::string}]{end\+Time }\end{DoxyParamCaption})}
+
+
+
+This function merges start\+Time \& end\+Time String into single formatted string  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}\label{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}} 
+\index{Curl\+Handler@{Curl\+Handler}!format\+Time@{format\+Time}}
+\index{format\+Time@{format\+Time}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{format\+Time()}{formatTime()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::format\+Time (\begin{DoxyParamCaption}\item[{std\+::string}]{time }\end{DoxyParamCaption})}
+
+
+
+This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM  String with times in following format\+: HH\+:MM. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}\label{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Curl\+U\+RL@{get\+Curl\+U\+RL}}
+\index{get\+Curl\+U\+RL@{get\+Curl\+U\+RL}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Curl\+U\+R\+L()}{getCurlURL()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Curl\+U\+RL (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function creates the curl request U\+RL with Date \& Room\+ID.  String of U\+RL. 
+
+\begin{DoxyNote}{Note}
+Needs a Room\+ID 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a54e7bc698682a0b313b3de0f6d2c7cf4}\label{classCurlHandler_a54e7bc698682a0b313b3de0f6d2c7cf4}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Current\+Time@{get\+Current\+Time}}
+\index{get\+Current\+Time@{get\+Current\+Time}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Current\+Time()}{getCurrentTime()}}
+{\footnotesize\ttfamily int Curl\+Handler\+::get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns current time  int with hour and minutes in following format\+: H\+H\+MM. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}\label{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Date@{get\+Date}}
+\index{get\+Date@{get\+Date}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Date()}{getDate()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function returns current date.  String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a021967e447f8980a4629b85cc3683a93}\label{classCurlHandler_a021967e447f8980a4629b85cc3683a93}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Date\+Field@{get\+Date\+Field}}
+\index{get\+Date\+Field@{get\+Date\+Field}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Date\+Field()}{getDateField()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Date\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function creates Date part of the curl request U\+RL.  String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\&. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}\label{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Free\+From@{get\+Free\+From}}
+\index{get\+Free\+From@{get\+Free\+From}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Free\+From()}{getFreeFrom()}}
+{\footnotesize\ttfamily void Curl\+Handler\+::get\+Free\+From (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calculates when the room is free  none. 
+
+\begin{DoxyNote}{Note}
+sets the free\+From String 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a26d8a6f384d54fd7af70fde33232531a}\label{classCurlHandler_a26d8a6f384d54fd7af70fde33232531a}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Id\+Field@{get\+Id\+Field}}
+\index{get\+Id\+Field@{get\+Id\+Field}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Id\+Field()}{getIdField()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Id\+Field (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function creates Room\+ID part of the curl request U\+RL.  String with Room\+ID in following format\+: element\+Id=Room\+ID. 
+
+\begin{DoxyNote}{Note}
+Needs a Room\+ID 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a8f82086fdc6993eb9068a25632652fb0}\label{classCurlHandler_a8f82086fdc6993eb9068a25632652fb0}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Lesson\+Info@{get\+Lesson\+Info}}
+\index{get\+Lesson\+Info@{get\+Lesson\+Info}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Lesson\+Info()}{getLessonInfo()}}
+{\footnotesize\ttfamily char $\ast$ Curl\+Handler\+::get\+Lesson\+Info (\begin{DoxyParamCaption}\item[{int}]{class\+ID }\end{DoxyParamCaption})}
+
+
+
+This function retrieves \& parses json  none. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}\label{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Lesson\+Teachers@{get\+Lesson\+Teachers}}
+\index{get\+Lesson\+Teachers@{get\+Lesson\+Teachers}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Lesson\+Teachers()}{getLessonTeachers()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Lesson\+Teachers (\begin{DoxyParamCaption}\item[{Json\+::\+Value}]{obj,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+This function gets the teachers from a lesson  String with teacher(s) of a lesson. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}\label{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}} 
+\index{Curl\+Handler@{Curl\+Handler}!get\+Lesson\+Time@{get\+Lesson\+Time}}
+\index{get\+Lesson\+Time@{get\+Lesson\+Time}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{get\+Lesson\+Time()}{getLessonTime()}}
+{\footnotesize\ttfamily std\+::string Curl\+Handler\+::get\+Lesson\+Time (\begin{DoxyParamCaption}\item[{Json\+::\+Value}]{obj,  }\item[{int}]{lesson\+Id,  }\item[{int}]{lesson }\end{DoxyParamCaption})}
+
+
+
+This function gets the end\+Time of a lesson and returns lessontime  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}\label{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}} 
+\index{Curl\+Handler@{Curl\+Handler}!move\+Lesson\+Times@{move\+Lesson\+Times}}
+\index{move\+Lesson\+Times@{move\+Lesson\+Times}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{move\+Lesson\+Times()}{moveLessonTimes()}}
+{\footnotesize\ttfamily void Curl\+Handler\+::move\+Lesson\+Times (\begin{DoxyParamCaption}\item[{int}]{lesson }\end{DoxyParamCaption})}
+
+
+
+This function moves\+Lesson\+Times  None. 
+
+\begin{DoxyNote}{Note}
+moves until given lesson; 
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a5d840e40c7e2d11297514947e957d542}\label{classCurlHandler_a5d840e40c7e2d11297514947e957d542}} 
+\index{Curl\+Handler@{Curl\+Handler}!output\+Info@{output\+Info}}
+\index{output\+Info@{output\+Info}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{output\+Info()}{outputInfo()}}
+{\footnotesize\ttfamily char $\ast$ Curl\+Handler\+::output\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Outputs Lesson info in used format  none. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}\label{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}} 
+\index{Curl\+Handler@{Curl\+Handler}!parse\+Json@{parse\+Json}}
+\index{parse\+Json@{parse\+Json}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{parse\+Json()}{parseJson()}}
+{\footnotesize\ttfamily void Curl\+Handler\+::parse\+Json (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+This function parses json and saves lesson data  none. 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\mbox{\Hypertarget{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}\label{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}} 
+\index{Curl\+Handler@{Curl\+Handler}!Write\+Callback@{Write\+Callback}}
+\index{Write\+Callback@{Write\+Callback}!Curl\+Handler@{Curl\+Handler}}
+\subsubsection{\texorpdfstring{Write\+Callback()}{WriteCallback()}}
+{\footnotesize\ttfamily size\+\_\+t Curl\+Handler\+::\+Write\+Callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{contents,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{void $\ast$}]{userp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function is used by curl\+Request as Write\+Callback . 
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/rso16/projects/\+E\+C\+D\+S/src/\+Curl\+Handler/\hyperlink{CurlHandler_8h}{Curl\+Handler.\+h}\item 
+/home/rso16/projects/\+E\+C\+D\+S/src/\+Curl\+Handler/\hyperlink{CurlHandler_8cpp}{Curl\+Handler.\+cpp}\end{DoxyCompactItemize}

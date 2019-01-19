@@ -1,0 +1,191 @@
+\hypertarget{node_8h}{}\section{/home/rso16/projects/\+E\+C\+D\+S/src/node/node.h File Reference}
+\label{node_8h}\index{/home/rso16/projects/\+E\+C\+D\+S/src/node/node.\+h@{/home/rso16/projects/\+E\+C\+D\+S/src/node/node.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for node.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNode}{Node}
+\item 
+struct \hyperlink{structLongNodeList}{Long\+Node\+List}
+\item 
+struct \hyperlink{structNodeList}{Node\+List}
+\item 
+struct \hyperlink{structNodeListList}{Node\+List\+List}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{node_8h_ab55a11ec48121682ed45b5bb79d539f9}{P\+R\+I\+N\+T\+F\+\_\+\+DI}~0
+\item 
+\#define \hyperlink{node_8h_a9b094d33c5ef4763435bdb618498268b}{P\+R\+I\+N\+T\+F\+\_\+\+EN}~1
+\item 
+\#define \hyperlink{node_8h_ae1649fc947ca37a86917a08354f48d1a}{P\+R\+I\+N\+TF}~\hyperlink{node_8h_a9b094d33c5ef4763435bdb618498268b}{P\+R\+I\+N\+T\+F\+\_\+\+EN}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structNode}{Node} \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node}
+\item 
+typedef struct \hyperlink{structLongNodeList}{Long\+Node\+List} \hyperlink{node_8h_ac7b6e906fd336e9b87ac5cd61422ad7b}{long\+Node\+List}
+\item 
+typedef struct \hyperlink{structNodeList}{Node\+List} \hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List}
+\item 
+typedef struct \hyperlink{structNodeListList}{Node\+List\+List} \hyperlink{node_8h_a2514b7894544047d1532178a93ab669f}{node\+List\+List}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$ \hyperlink{node_8h_a73de0984399c80d3bfbde1192e956b22}{create\+Node} (uint8\+\_\+t data)
+\item 
+void \hyperlink{node_8h_a8079903e57c1b2ceccac5397840e3186}{set\+Next\+Node} (\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$current\+Node, \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$next\+Node)
+\item 
+void \hyperlink{node_8h_a6b267af86b4460e63c583aef18fa8b36}{add\+Head\+To\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list, \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$new\+Head)
+\item 
+void \hyperlink{node_8h_a42494c5e708716904e2720200926af31}{remove\+Head\+From\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list)
+\item 
+void \hyperlink{node_8h_a5e6b08c323ed5d41b96d24b13214ce04}{add\+Node\+To\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list, \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$new\+Node)
+\item 
+void \hyperlink{node_8h_ac8a1823975e9ad5d80138449bca2f7a5}{add\+Data\+To\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list, uint8\+\_\+t data)
+\item 
+void \hyperlink{node_8h_a9114ee1c165ee76811fc655655169836}{add\+Node\+List\+To\+Node\+List\+List} (\hyperlink{node_8h_a2514b7894544047d1532178a93ab669f}{node\+List\+List} $\ast$list, \hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$next\+Node\+List)
+\item 
+void \hyperlink{node_8h_a156f67df63276c605fac7a621110e093}{add\+Str\+To\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list, char $\ast$str)
+\item 
+void \hyperlink{node_8h_a8648cf8f275fac80794863e1a5421812}{print\+Node} (\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$current\+Node)
+\item 
+void \hyperlink{node_8h_aba8e9d4e4f283de6241d47416b5e09e1}{print\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list)
+\item 
+void \hyperlink{node_8h_a2dd6219a10b9d48ecc40b5ecc5fe2b60}{print\+Str\+List} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list)
+\item 
+int \hyperlink{node_8h_aaf02f1e445c290f6716057db41c19a17}{list\+To\+Str} (\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$list, char $\ast$str, int begin, int end)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{node_8h_ae1649fc947ca37a86917a08354f48d1a}\label{node_8h_ae1649fc947ca37a86917a08354f48d1a}} 
+\index{node.\+h@{node.\+h}!P\+R\+I\+N\+TF@{P\+R\+I\+N\+TF}}
+\index{P\+R\+I\+N\+TF@{P\+R\+I\+N\+TF}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+TF}{PRINTF}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+TF~\hyperlink{node_8h_a9b094d33c5ef4763435bdb618498268b}{P\+R\+I\+N\+T\+F\+\_\+\+EN}}
+
+\mbox{\Hypertarget{node_8h_ab55a11ec48121682ed45b5bb79d539f9}\label{node_8h_ab55a11ec48121682ed45b5bb79d539f9}} 
+\index{node.\+h@{node.\+h}!P\+R\+I\+N\+T\+F\+\_\+\+DI@{P\+R\+I\+N\+T\+F\+\_\+\+DI}}
+\index{P\+R\+I\+N\+T\+F\+\_\+\+DI@{P\+R\+I\+N\+T\+F\+\_\+\+DI}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+F\+\_\+\+DI}{PRINTF\_DI}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+F\+\_\+\+DI~0}
+
+\mbox{\Hypertarget{node_8h_a9b094d33c5ef4763435bdb618498268b}\label{node_8h_a9b094d33c5ef4763435bdb618498268b}} 
+\index{node.\+h@{node.\+h}!P\+R\+I\+N\+T\+F\+\_\+\+EN@{P\+R\+I\+N\+T\+F\+\_\+\+EN}}
+\index{P\+R\+I\+N\+T\+F\+\_\+\+EN@{P\+R\+I\+N\+T\+F\+\_\+\+EN}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+F\+\_\+\+EN}{PRINTF\_EN}}
+{\footnotesize\ttfamily \#define P\+R\+I\+N\+T\+F\+\_\+\+EN~1}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{node_8h_ac7b6e906fd336e9b87ac5cd61422ad7b}\label{node_8h_ac7b6e906fd336e9b87ac5cd61422ad7b}} 
+\index{node.\+h@{node.\+h}!long\+Node\+List@{long\+Node\+List}}
+\index{long\+Node\+List@{long\+Node\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{long\+Node\+List}{longNodeList}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structLongNodeList}{Long\+Node\+List} \hyperlink{node_8h_ac7b6e906fd336e9b87ac5cd61422ad7b}{long\+Node\+List}}
+
+\mbox{\Hypertarget{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}\label{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}} 
+\index{node.\+h@{node.\+h}!node@{node}}
+\index{node@{node}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structNode}{Node} \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node}}
+
+\mbox{\Hypertarget{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}\label{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}} 
+\index{node.\+h@{node.\+h}!node\+List@{node\+List}}
+\index{node\+List@{node\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{node\+List}{nodeList}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structNodeList}{Node\+List} \hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List}}
+
+\mbox{\Hypertarget{node_8h_a2514b7894544047d1532178a93ab669f}\label{node_8h_a2514b7894544047d1532178a93ab669f}} 
+\index{node.\+h@{node.\+h}!node\+List\+List@{node\+List\+List}}
+\index{node\+List\+List@{node\+List\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{node\+List\+List}{nodeListList}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structNodeListList}{Node\+List\+List} \hyperlink{node_8h_a2514b7894544047d1532178a93ab669f}{node\+List\+List}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{node_8h_ac8a1823975e9ad5d80138449bca2f7a5}\label{node_8h_ac8a1823975e9ad5d80138449bca2f7a5}} 
+\index{node.\+h@{node.\+h}!add\+Data\+To\+List@{add\+Data\+To\+List}}
+\index{add\+Data\+To\+List@{add\+Data\+To\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{add\+Data\+To\+List()}{addDataToList()}}
+{\footnotesize\ttfamily void add\+Data\+To\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a6b267af86b4460e63c583aef18fa8b36}\label{node_8h_a6b267af86b4460e63c583aef18fa8b36}} 
+\index{node.\+h@{node.\+h}!add\+Head\+To\+List@{add\+Head\+To\+List}}
+\index{add\+Head\+To\+List@{add\+Head\+To\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{add\+Head\+To\+List()}{addHeadToList()}}
+{\footnotesize\ttfamily void add\+Head\+To\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list,  }\item[{\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$}]{new\+Head }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a9114ee1c165ee76811fc655655169836}\label{node_8h_a9114ee1c165ee76811fc655655169836}} 
+\index{node.\+h@{node.\+h}!add\+Node\+List\+To\+Node\+List\+List@{add\+Node\+List\+To\+Node\+List\+List}}
+\index{add\+Node\+List\+To\+Node\+List\+List@{add\+Node\+List\+To\+Node\+List\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{add\+Node\+List\+To\+Node\+List\+List()}{addNodeListToNodeListList()}}
+{\footnotesize\ttfamily void add\+Node\+List\+To\+Node\+List\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a2514b7894544047d1532178a93ab669f}{node\+List\+List} $\ast$}]{list,  }\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{next\+Node\+List }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a5e6b08c323ed5d41b96d24b13214ce04}\label{node_8h_a5e6b08c323ed5d41b96d24b13214ce04}} 
+\index{node.\+h@{node.\+h}!add\+Node\+To\+List@{add\+Node\+To\+List}}
+\index{add\+Node\+To\+List@{add\+Node\+To\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{add\+Node\+To\+List()}{addNodeToList()}}
+{\footnotesize\ttfamily void add\+Node\+To\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list,  }\item[{\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$}]{new\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a156f67df63276c605fac7a621110e093}\label{node_8h_a156f67df63276c605fac7a621110e093}} 
+\index{node.\+h@{node.\+h}!add\+Str\+To\+List@{add\+Str\+To\+List}}
+\index{add\+Str\+To\+List@{add\+Str\+To\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{add\+Str\+To\+List()}{addStrToList()}}
+{\footnotesize\ttfamily void add\+Str\+To\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a73de0984399c80d3bfbde1192e956b22}\label{node_8h_a73de0984399c80d3bfbde1192e956b22}} 
+\index{node.\+h@{node.\+h}!create\+Node@{create\+Node}}
+\index{create\+Node@{create\+Node}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{create\+Node()}{createNode()}}
+{\footnotesize\ttfamily \hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node}$\ast$ create\+Node (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_aaf02f1e445c290f6716057db41c19a17}\label{node_8h_aaf02f1e445c290f6716057db41c19a17}} 
+\index{node.\+h@{node.\+h}!list\+To\+Str@{list\+To\+Str}}
+\index{list\+To\+Str@{list\+To\+Str}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{list\+To\+Str()}{listToStr()}}
+{\footnotesize\ttfamily int list\+To\+Str (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list,  }\item[{char $\ast$}]{str,  }\item[{int}]{begin,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_aba8e9d4e4f283de6241d47416b5e09e1}\label{node_8h_aba8e9d4e4f283de6241d47416b5e09e1}} 
+\index{node.\+h@{node.\+h}!print\+List@{print\+List}}
+\index{print\+List@{print\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{print\+List()}{printList()}}
+{\footnotesize\ttfamily void print\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a8648cf8f275fac80794863e1a5421812}\label{node_8h_a8648cf8f275fac80794863e1a5421812}} 
+\index{node.\+h@{node.\+h}!print\+Node@{print\+Node}}
+\index{print\+Node@{print\+Node}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{print\+Node()}{printNode()}}
+{\footnotesize\ttfamily void print\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$}]{current\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a2dd6219a10b9d48ecc40b5ecc5fe2b60}\label{node_8h_a2dd6219a10b9d48ecc40b5ecc5fe2b60}} 
+\index{node.\+h@{node.\+h}!print\+Str\+List@{print\+Str\+List}}
+\index{print\+Str\+List@{print\+Str\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{print\+Str\+List()}{printStrList()}}
+{\footnotesize\ttfamily void print\+Str\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a42494c5e708716904e2720200926af31}\label{node_8h_a42494c5e708716904e2720200926af31}} 
+\index{node.\+h@{node.\+h}!remove\+Head\+From\+List@{remove\+Head\+From\+List}}
+\index{remove\+Head\+From\+List@{remove\+Head\+From\+List}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{remove\+Head\+From\+List()}{removeHeadFromList()}}
+{\footnotesize\ttfamily void remove\+Head\+From\+List (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_a5fd6616a46d921b78b4bfee8f561b3f4}{node\+List} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{node_8h_a8079903e57c1b2ceccac5397840e3186}\label{node_8h_a8079903e57c1b2ceccac5397840e3186}} 
+\index{node.\+h@{node.\+h}!set\+Next\+Node@{set\+Next\+Node}}
+\index{set\+Next\+Node@{set\+Next\+Node}!node.\+h@{node.\+h}}
+\subsubsection{\texorpdfstring{set\+Next\+Node()}{setNextNode()}}
+{\footnotesize\ttfamily void set\+Next\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$}]{current\+Node,  }\item[{\hyperlink{node_8h_ad8ecdcce462dd8e170ae1f164935aaa6}{node} $\ast$}]{next\+Node }\end{DoxyParamCaption})}
+
