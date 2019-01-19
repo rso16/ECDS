@@ -5,10 +5,22 @@ Rick Ovehorst, Gerjon Eilander \& Gerben van \textquotesingle{}t Ooster
 1.\+0 
 \end{DoxyVersion}
 \hypertarget{index_intro_sec}{}\section{Introduction}\label{index_intro_sec}
-This server program sends schedule data from the Windesheim\textquotesingle{}s systems to the modules upon request.\hypertarget{index_compile_sec}{}\section{Compilation}\label{index_compile_sec}
-\hypertarget{index_dl}{}\subsection{Dynamic libraries}\label{index_dl}
+This server program sends schedule data from the Windesheim\textquotesingle{}s systems to the modules upon request.\hypertarget{index_compile_sec}{}\section{Using the software}\label{index_compile_sec}
+\hypertarget{index_install}{}\subsection{neccesary packages}\label{index_install}
+The packages that are neccesary, can be optained by using folowing commands \+: 
+\begin{DoxyCode}
+sudo apt-\textcolor{keyword}{get} install libmysqlclient-dev
+sudo apt-\textcolor{keyword}{get} install libcurl4-nss-dev 
+sudo apt-\textcolor{keyword}{get} install libjsoncpp-nss-dev
+sudo apt-\textcolor{keyword}{get} install mysql-\hyperlink{main_8h_afd1a82c786509e03b540bae82af2c137}{server}
+sudo apt-\textcolor{keyword}{get} install mysql-client
+\end{DoxyCode}
 
-\begin{DoxyItemize}
-\item list item 1
-\item list item 2 
-\end{DoxyItemize}
+
+Packages neccesary for compiling\+: 
+\begin{DoxyCode}
+sudo apt-\textcolor{keyword}{get} install gcc
+sudo apt-\textcolor{keyword}{get} install make
+\end{DoxyCode}
+\hypertarget{index_run}{}\subsection{Running the software}\label{index_run}
+To run the software use the following command\+: sudo bin/server $<$ip$>$ $<$port$>$ 

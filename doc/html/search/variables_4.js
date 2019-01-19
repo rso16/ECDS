@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['requestclassdata',['RequestClassData',['../CurlHandler_8h.html#a690460d365a25ec4f0dd7b69c23dfbb6',1,'CurlHandler.h']]]
+  ['mhandler',['mHandler',['../main_8h.html#a52c8376765d7847a2347ff9e77249f32',1,'main.h']]]
 ];
