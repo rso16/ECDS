@@ -17,11 +17,11 @@ Collaboration diagram for E\+C\+DH\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 uint64\+\_\+t \hyperlink{classECDH_a3ff5f397f1198e2f1daa7689434f338c}{get\+M\+AC} (char $\ast$server\+Request)
-\item 
+\begin{DoxyCompactList}\small\item\em This Function gets the M\+A\+C-\/address from the server request and changes it to an int (the way the M\+A\+C-\/address is stored in the db). \end{DoxyCompactList}\item 
 int \hyperlink{classECDH_ac552676079ed12da22501ead4d15500b}{get\+Room\+Id} (uint64\+\_\+t M\+AC)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the room id from the db. \end{DoxyCompactList}\item 
 uint64\+\_\+t \hyperlink{classECDH_a0b5fb1d5817ba51fe4e055190c3c88f2}{string\+\_\+to\+\_\+mac} (std\+::string const \&s)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This Function turns the M\+A\+C-\/address into an int (the way the M\+A\+C-\/address is stored in the db). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
@@ -31,18 +31,48 @@ uint64\+\_\+t \hyperlink{classECDH_a0b5fb1d5817ba51fe4e055190c3c88f2}{string\+\_
 \subsubsection{\texorpdfstring{get\+M\+A\+C()}{getMAC()}}
 {\footnotesize\ttfamily uint64\+\_\+t E\+C\+D\+H\+::get\+M\+AC (\begin{DoxyParamCaption}\item[{char $\ast$}]{server\+Request }\end{DoxyParamCaption})}
 
+
+
+This Function gets the M\+A\+C-\/address from the server request and changes it to an int (the way the M\+A\+C-\/address is stored in the db). 
+
+\begin{DoxyReturn}{Returns}
+The M\+A\+C-\/address in database form. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classECDH_ac552676079ed12da22501ead4d15500b}\label{classECDH_ac552676079ed12da22501ead4d15500b}} 
 \index{E\+C\+DH@{E\+C\+DH}!get\+Room\+Id@{get\+Room\+Id}}
 \index{get\+Room\+Id@{get\+Room\+Id}!E\+C\+DH@{E\+C\+DH}}
 \subsubsection{\texorpdfstring{get\+Room\+Id()}{getRoomId()}}
 {\footnotesize\ttfamily int E\+C\+D\+H\+::get\+Room\+Id (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{M\+AC }\end{DoxyParamCaption})}
 
+
+
+Gets the room id from the db. 
+
+\begin{DoxyReturn}{Returns}
+The room Id. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classECDH_a0b5fb1d5817ba51fe4e055190c3c88f2}\label{classECDH_a0b5fb1d5817ba51fe4e055190c3c88f2}} 
 \index{E\+C\+DH@{E\+C\+DH}!string\+\_\+to\+\_\+mac@{string\+\_\+to\+\_\+mac}}
 \index{string\+\_\+to\+\_\+mac@{string\+\_\+to\+\_\+mac}!E\+C\+DH@{E\+C\+DH}}
 \subsubsection{\texorpdfstring{string\+\_\+to\+\_\+mac()}{string\_to\_mac()}}
 {\footnotesize\ttfamily uint64\+\_\+t E\+C\+D\+H\+::string\+\_\+to\+\_\+mac (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{s }\end{DoxyParamCaption})}
 
+
+
+This Function turns the M\+A\+C-\/address into an int (the way the M\+A\+C-\/address is stored in the db). 
+
+\begin{DoxyReturn}{Returns}
+The M\+A\+C-\/address in database form. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Maxim Egorushkin 
+\end{DoxyAuthor}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

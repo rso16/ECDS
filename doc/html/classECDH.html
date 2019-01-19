@@ -77,10 +77,13 @@ Collaboration diagram for ECDH:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ff5f397f1198e2f1daa7689434f338c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECDH.html#a3ff5f397f1198e2f1daa7689434f338c">getMAC</a> (char *serverRequest)</td></tr>
+<tr class="memdesc:a3ff5f397f1198e2f1daa7689434f338c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This Function gets the MAC-address from the server request and changes it to an int (the way the MAC-address is stored in the db).  <a href="#a3ff5f397f1198e2f1daa7689434f338c">More...</a><br /></td></tr>
 <tr class="separator:a3ff5f397f1198e2f1daa7689434f338c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac552676079ed12da22501ead4d15500b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECDH.html#ac552676079ed12da22501ead4d15500b">getRoomId</a> (uint64_t MAC)</td></tr>
+<tr class="memdesc:ac552676079ed12da22501ead4d15500b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the room id from the db.  <a href="#ac552676079ed12da22501ead4d15500b">More...</a><br /></td></tr>
 <tr class="separator:ac552676079ed12da22501ead4d15500b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b5fb1d5817ba51fe4e055190c3c88f2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classECDH.html#a0b5fb1d5817ba51fe4e055190c3c88f2">string_to_mac</a> (std::string const &amp;s)</td></tr>
+<tr class="memdesc:a0b5fb1d5817ba51fe4e055190c3c88f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This Function turns the MAC-address into an int (the way the MAC-address is stored in the db).  <a href="#a0b5fb1d5817ba51fe4e055190c3c88f2">More...</a><br /></td></tr>
 <tr class="separator:a0b5fb1d5817ba51fe4e055190c3c88f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -100,6 +103,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>This Function gets the MAC-address from the server request and changes it to an int (the way the MAC-address is stored in the db). </p>
+<dl class="section return"><dt>Returns</dt><dd>The MAC-address in database form. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
+
 </div>
 </div>
 <a id="ac552676079ed12da22501ead4d15500b"></a>
@@ -118,6 +125,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Gets the room id from the db. </p>
+<dl class="section return"><dt>Returns</dt><dd>The room Id. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Rick Overhorst </dd></dl>
+
 </div>
 </div>
 <a id="a0b5fb1d5817ba51fe4e055190c3c88f2"></a>
@@ -135,6 +146,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This Function turns the MAC-address into an int (the way the MAC-address is stored in the db). </p>
+<dl class="section return"><dt>Returns</dt><dd>The MAC-address in database form. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Maxim Egorushkin </dd></dl>
 
 </div>
 </div>
