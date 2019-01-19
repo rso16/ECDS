@@ -6,7 +6,7 @@
 /**
 * @brief This function sets the classID
 * @returns none
-* @note
+* @Author Rick Overhorst
 */
 void CurlHandler::setClassId(int id)
 {
@@ -17,7 +17,7 @@ void CurlHandler::setClassId(int id)
 
 /**
 * @brief This function retrieves & parses json
-* @returns none
+* @returns Lesson info
 * @note
 */
 char* CurlHandler::getLessonInfo(int classID){
@@ -30,7 +30,7 @@ char* CurlHandler::getLessonInfo(int classID){
 
 /**
 * @brief This function requests Room data from roostertest.windesheim.nl by RoomID.
-* @returns none
+* @returns Room data	
 * @note needs a pointer to a string buffer & RoomID int
 */
 std::string CurlHandler::curlRequest(int ID){
@@ -63,7 +63,7 @@ std::string CurlHandler::curlRequest(int ID){
 
 /**
 * @brief This function is used by curlRequest as WriteCallback
-* @returns
+* @returns 
 * @note
 */
 size_t CurlHandler::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp){
