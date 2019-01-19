@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 /**
 * @brief This function sets the classID
-* @retuns none
+* @returns none
 * @note
 */
 void CurlHandler::setClassId(int id)
@@ -17,7 +17,7 @@ void CurlHandler::setClassId(int id)
 
 /**
 * @brief This function retrieves & parses json
-* @retuns none
+* @returns none
 * @note
 */
 char* CurlHandler::getLessonInfo(int classID){
@@ -30,7 +30,7 @@ char* CurlHandler::getLessonInfo(int classID){
 
 /**
 * @brief This function requests Room data from roostertest.windesheim.nl by RoomID.
-* @retuns none
+* @returns none
 * @note needs a pointer to a string buffer & RoomID int
 */
 std::string CurlHandler::curlRequest(int ID){
@@ -63,7 +63,7 @@ std::string CurlHandler::curlRequest(int ID){
 
 /**
 * @brief This function is used by curlRequest as WriteCallback
-* @retuns
+* @returns
 * @note
 */
 size_t CurlHandler::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp){
@@ -73,7 +73,7 @@ size_t CurlHandler::WriteCallback(void *contents, size_t size, size_t nmemb, voi
 
 /**
 * @brief This function creates the curl request URL with Date & RoomID.
-* @retuns String of URL
+* @returns String of URL
 * @note Needs a RoomID
 */
 std::string CurlHandler::getCurlURL(int ID){
@@ -85,7 +85,7 @@ std::string CurlHandler::getCurlURL(int ID){
 
 /**
 * @brief This function creates Date part of the curl request URL.
-* @retuns String with date in following format: data=YYYYMMDD&
+* @returns String with date in following format: data=YYYYMMDD&
 * @note
 */
 std::string CurlHandler::getDateField(){
@@ -97,7 +97,7 @@ std::string CurlHandler::getDateField(){
 
 /**
 * @brief This function returns current date.
-* @retuns String with date in following format: YYYYMMDD
+* @returns String with date in following format: YYYYMMDD
 * @note
 */
 std::string CurlHandler::getDate(){
@@ -111,7 +111,7 @@ std::string CurlHandler::getDate(){
 
 /**
 * @brief This function creates RoomID part of the curl request URL.
-* @retuns String with RoomID in following format: elementId=RoomID.
+* @returns String with RoomID in following format: elementId=RoomID.
 * @note Needs a RoomID
 */
 std::string CurlHandler::getIdField(int ID){
@@ -123,7 +123,7 @@ std::string CurlHandler::getIdField(int ID){
 
 /**
 * @brief This function parses json and saves lesson data
-* @retuns none
+* @returns none
 * @note
 */
 void CurlHandler::parseJson(std::string* buffer){
@@ -169,7 +169,7 @@ void CurlHandler::parseJson(std::string* buffer){
 
 /**
 * @brief This function returns current time
-* @retuns int with hour and minutes in following format: HHMM
+* @returns int with hour and minutes in following format: HHMM
 * @note
 */
 int CurlHandler::getCurrentTime(){
@@ -181,7 +181,7 @@ int CurlHandler::getCurrentTime(){
 
 /**
 * @brief This function movesLessonTimes
-* @retuns None
+* @returns None
 * @note moves until given lesson;
 */
 void CurlHandler::moveLessonTimes(int lesson){
@@ -198,7 +198,7 @@ void CurlHandler::moveLessonTimes(int lesson){
 
 /**
 * @brief This function gets the endTime of a lesson and returns lessontime
-* @retuns String with lesson times in following format: HH:MM - HH:MM
+* @returns String with lesson times in following format: HH:MM - HH:MM
 * @note
 */
 std::string CurlHandler::getLessonTime(Json::Value obj, int lessonId, int lesson){
@@ -224,7 +224,7 @@ std::string CurlHandler::getLessonTime(Json::Value obj, int lessonId, int lesson
 
 /**
 * @brief This function merges startTime & endTime String into single formatted string
-* @retuns String with lesson times in following format: HH:MM - HH:MM
+* @returns String with lesson times in following format: HH:MM - HH:MM
 * @note
 */
 std::string CurlHandler::formatFullTime(std::string startTime, std::string endTime){
@@ -235,7 +235,7 @@ std::string CurlHandler::formatFullTime(std::string startTime, std::string endTi
 
 /**
 * @brief This function adds : to time string HHMM -> HH:MM
-* @retuns String with times in following format: HH:MM
+* @returns String with times in following format: HH:MM
 * @note
 */
 std::string CurlHandler::formatTime(std::string time){
@@ -248,7 +248,7 @@ std::string CurlHandler::formatTime(std::string time){
 
 /**
 * @brief This function gets the teachers from a lesson
-* @retuns String with teacher(s) of a lesson
+* @returns String with teacher(s) of a lesson
 * @note
 */
 std::string CurlHandler::getLessonTeachers(Json::Value obj, int i){
@@ -275,7 +275,7 @@ std::string CurlHandler::getLessonTeachers(Json::Value obj, int i){
 
 /**
 * @brief This function calculates when the room is free
-* @retuns none
+* @returns none
 * @note sets the freeFrom String
 */
 void CurlHandler::getFreeFrom(){
@@ -305,7 +305,7 @@ void CurlHandler::getFreeFrom(){
 
 /**
 * @brief Outputs Lesson info in used format
-* @retuns none
+* @returns none
 * @note
 */
 char *CurlHandler::outputInfo(){

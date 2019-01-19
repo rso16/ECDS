@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['executesql',['executeSQL',['../classMysqlHandler.html#abee4d47196df8c42420fe771508a6ff9',1,'MysqlHandler']]]
+  ['formatfulltime',['formatFullTime',['../classCurlHandler.html#ae208efd8422979786ee921c5148b17c7',1,'CurlHandler']]],
+  ['formattime',['formatTime',['../classCurlHandler.html#a8552fd1c4558661d3699e4cbd8897acc',1,'CurlHandler']]]
 ];

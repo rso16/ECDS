@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mysqlhandler',['MysqlHandler',['../classMysqlHandler.html',1,'']]]
+  ['server',['Server',['../classServer.html',1,'']]]
 ];

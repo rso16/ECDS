@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['ecdh',['ECDH',['../classECDH.html',1,'']]],
-  ['ecdh_2ecpp',['ECDH.cpp',['../ECDH_8cpp.html',1,'']]],
-  ['ecdh_2eh',['ECDH.h',['../ECDH_8h.html',1,'']]],
-  ['ehandler',['eHandler',['../main_8h.html#adde9b3824c73385d6da28d4707dddc09',1,'main.h']]],
-  ['executesql',['executeSQL',['../classMysqlHandler.html#abee4d47196df8c42420fe771508a6ff9',1,'MysqlHandler']]]
+  ['formatfulltime',['formatFullTime',['../classCurlHandler.html#ae208efd8422979786ee921c5148b17c7',1,'CurlHandler']]],
+  ['formattime',['formatTime',['../classCurlHandler.html#a8552fd1c4558661d3699e4cbd8897acc',1,'CurlHandler']]]
 ];

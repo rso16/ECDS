@@ -4,44 +4,53 @@
 
 {\ttfamily \#include $<$Curl\+Handler.\+h$>$}
 
+
+
+Collaboration diagram for Curl\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classCurlHandler__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 char $\ast$ \hyperlink{classCurlHandler_a8f82086fdc6993eb9068a25632652fb0}{get\+Lesson\+Info} (int class\+Id)
-\begin{DoxyCompactList}\small\item\em This function retrieves \& parses json  none. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function retrieves \& parses json. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_a3b115e8ef11a96743b49797b4025b3a0}{curl\+Request} (int ID)
-\begin{DoxyCompactList}\small\item\em This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID.  none. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}{get\+Curl\+U\+RL} (int ID)
-\begin{DoxyCompactList}\small\item\em This function creates the curl request U\+RL with Date \& Room\+ID.  String of U\+RL. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function creates the curl request U\+RL with Date \& Room\+ID. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_a021967e447f8980a4629b85cc3683a93}{get\+Date\+Field} ()
-\begin{DoxyCompactList}\small\item\em This function creates Date part of the curl request U\+RL.  String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\&. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function creates Date part of the curl request U\+RL. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}{get\+Date} ()
-\begin{DoxyCompactList}\small\item\em This function returns current date.  String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function returns current date. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_a26d8a6f384d54fd7af70fde33232531a}{get\+Id\+Field} (int ID)
-\begin{DoxyCompactList}\small\item\em This function creates Room\+ID part of the curl request U\+RL.  String with Room\+ID in following format\+: element\+Id=Room\+ID. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function creates Room\+ID part of the curl request U\+RL. \end{DoxyCompactList}\item 
 void \hyperlink{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}{parse\+Json} (std\+::string $\ast$buffer)
-\begin{DoxyCompactList}\small\item\em This function parses json and saves lesson data  none. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function parses json and saves lesson data. \end{DoxyCompactList}\item 
 int \hyperlink{classCurlHandler_a54e7bc698682a0b313b3de0f6d2c7cf4}{get\+Current\+Time} ()
-\begin{DoxyCompactList}\small\item\em This function returns current time  int with hour and minutes in following format\+: H\+H\+MM. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function returns current time. \end{DoxyCompactList}\item 
 void \hyperlink{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}{move\+Lesson\+Times} (int lesson)
-\begin{DoxyCompactList}\small\item\em This function moves\+Lesson\+Times  None. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function moves\+Lesson\+Times. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}{get\+Lesson\+Time} (Json\+::\+Value obj, int lesson\+Id, int lesson)
-\begin{DoxyCompactList}\small\item\em This function gets the end\+Time of a lesson and returns lessontime  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function gets the end\+Time of a lesson and returns lessontime. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_ae208efd8422979786ee921c5148b17c7}{format\+Full\+Time} (std\+::string start\+Time, std\+::string end\+Time)
-\begin{DoxyCompactList}\small\item\em This function merges start\+Time \& end\+Time String into single formatted string  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function merges start\+Time \& end\+Time String into single formatted string. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}{format\+Time} (std\+::string time)
-\begin{DoxyCompactList}\small\item\em This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM  String with times in following format\+: HH\+:MM. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}{get\+Lesson\+Teachers} (Json\+::\+Value obj, int i)
-\begin{DoxyCompactList}\small\item\em This function gets the teachers from a lesson  String with teacher(s) of a lesson. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function gets the teachers from a lesson. \end{DoxyCompactList}\item 
 void \hyperlink{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}{get\+Free\+From} ()
-\begin{DoxyCompactList}\small\item\em This function calculates when the room is free  none. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function calculates when the room is free. \end{DoxyCompactList}\item 
 char $\ast$ \hyperlink{classCurlHandler_a5d840e40c7e2d11297514947e957d542}{output\+Info} ()
-\begin{DoxyCompactList}\small\item\em Outputs Lesson info in used format  none. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Outputs Lesson info in used format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static size\+\_\+t \hyperlink{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}{Write\+Callback} (void $\ast$contents, size\+\_\+t size, size\+\_\+t nmemb, void $\ast$userp)
-\begin{DoxyCompactList}\small\item\em This function is used by curl\+Request as Write\+Callback . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function is used by curl\+Request as Write\+Callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Member Function Documentation}
@@ -53,8 +62,11 @@ static size\+\_\+t \hyperlink{classCurlHandler_aff816fc825c4ad52b377c808a900d07d
 
 
 
-This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID.  none. 
+This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID. 
 
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 needs a pointer to a string buffer \& Room\+ID int 
 \end{DoxyNote}
@@ -66,8 +78,11 @@ needs a pointer to a string buffer \& Room\+ID int
 
 
 
-This function merges start\+Time \& end\+Time String into single formatted string  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. 
+This function merges start\+Time \& end\+Time String into single formatted string. 
 
+\begin{DoxyReturn}{Returns}
+String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -79,8 +94,11 @@ This function merges start\+Time \& end\+Time String into single formatted strin
 
 
 
-This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM  String with times in following format\+: HH\+:MM. 
+This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM. 
 
+\begin{DoxyReturn}{Returns}
+String with times in following format\+: HH\+:MM 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -92,8 +110,11 @@ This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM  String with times
 
 
 
-This function creates the curl request U\+RL with Date \& Room\+ID.  String of U\+RL. 
+This function creates the curl request U\+RL with Date \& Room\+ID. 
 
+\begin{DoxyReturn}{Returns}
+String of U\+RL 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 Needs a Room\+ID 
 \end{DoxyNote}
@@ -105,8 +126,11 @@ Needs a Room\+ID
 
 
 
-This function returns current time  int with hour and minutes in following format\+: H\+H\+MM. 
+This function returns current time. 
 
+\begin{DoxyReturn}{Returns}
+int with hour and minutes in following format\+: H\+H\+MM 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -118,8 +142,11 @@ This function returns current time  int with hour and minutes in following forma
 
 
 
-This function returns current date.  String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD. 
+This function returns current date. 
 
+\begin{DoxyReturn}{Returns}
+String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -131,8 +158,11 @@ This function returns current date.  String with date in following format\+: Y\+
 
 
 
-This function creates Date part of the curl request U\+RL.  String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\&. 
+This function creates Date part of the curl request U\+RL. 
 
+\begin{DoxyReturn}{Returns}
+String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\& 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -144,8 +174,11 @@ This function creates Date part of the curl request U\+RL.  String with date in 
 
 
 
-This function calculates when the room is free  none. 
+This function calculates when the room is free. 
 
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 sets the free\+From String 
 \end{DoxyNote}
@@ -157,8 +190,11 @@ sets the free\+From String
 
 
 
-This function creates Room\+ID part of the curl request U\+RL.  String with Room\+ID in following format\+: element\+Id=Room\+ID. 
+This function creates Room\+ID part of the curl request U\+RL. 
 
+\begin{DoxyReturn}{Returns}
+String with Room\+ID in following format\+: element\+Id=Room\+ID. 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 Needs a Room\+ID 
 \end{DoxyNote}
@@ -170,8 +206,11 @@ Needs a Room\+ID
 
 
 
-This function retrieves \& parses json  none. 
+This function retrieves \& parses json. 
 
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -183,8 +222,11 @@ This function retrieves \& parses json  none.
 
 
 
-This function gets the teachers from a lesson  String with teacher(s) of a lesson. 
+This function gets the teachers from a lesson. 
 
+\begin{DoxyReturn}{Returns}
+String with teacher(s) of a lesson 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -196,8 +238,11 @@ This function gets the teachers from a lesson  String with teacher(s) of a lesso
 
 
 
-This function gets the end\+Time of a lesson and returns lessontime  String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM. 
+This function gets the end\+Time of a lesson and returns lessontime. 
 
+\begin{DoxyReturn}{Returns}
+String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -209,8 +254,11 @@ This function gets the end\+Time of a lesson and returns lessontime  String with
 
 
 
-This function moves\+Lesson\+Times  None. 
+This function moves\+Lesson\+Times. 
 
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 moves until given lesson; 
 \end{DoxyNote}
@@ -222,8 +270,11 @@ moves until given lesson;
 
 
 
-Outputs Lesson info in used format  none. 
+Outputs Lesson info in used format. 
 
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -235,8 +286,11 @@ Outputs Lesson info in used format  none.
 
 
 
-This function parses json and saves lesson data  none. 
+This function parses json and saves lesson data. 
 
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}
@@ -248,8 +302,11 @@ This function parses json and saves lesson data  none.
 
 
 
-This function is used by curl\+Request as Write\+Callback . 
+This function is used by curl\+Request as Write\+Callback. 
 
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \begin{DoxyNote}{Note}
 
 \end{DoxyNote}

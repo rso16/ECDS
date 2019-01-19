@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['disconnect',['disconnect',['../classServer.html#acd0114484495cfd2749816ddb12e4246',1,'Server']]]
+  ['executesql',['executeSQL',['../classMysqlHandler.html#abee4d47196df8c42420fe771508a6ff9',1,'MysqlHandler']]]
 ];

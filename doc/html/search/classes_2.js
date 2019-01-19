@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['longnodelist',['LongNodeList',['../structLongNodeList.html',1,'']]]
+  ['mysqlhandler',['MysqlHandler',['../classMysqlHandler.html',1,'']]]
 ];
