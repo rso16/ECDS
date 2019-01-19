@@ -65,7 +65,7 @@ static size\+\_\+t \hyperlink{classCurlHandler_aff816fc825c4ad52b377c808a900d07d
 This function requests Room data from roostertest.\+windesheim.\+nl by Room\+ID. 
 
 \begin{DoxyReturn}{Returns}
-none 
+Room data 
 \end{DoxyReturn}
 \begin{DoxyNote}{Note}
 needs a pointer to a string buffer \& Room\+ID int 
@@ -83,9 +83,6 @@ This function merges start\+Time \& end\+Time String into single formatted strin
 \begin{DoxyReturn}{Returns}
 String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}\label{classCurlHandler_a8552fd1c4558661d3699e4cbd8897acc}} 
 \index{Curl\+Handler@{Curl\+Handler}!format\+Time@{format\+Time}}
 \index{format\+Time@{format\+Time}!Curl\+Handler@{Curl\+Handler}}
@@ -99,9 +96,6 @@ This function adds \+: to time string H\+H\+MM -\/$>$ HH\+:MM.
 \begin{DoxyReturn}{Returns}
 String with times in following format\+: HH\+:MM 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}\label{classCurlHandler_a967784524e6d6d95b1d7089e3221fbfb}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Curl\+U\+RL@{get\+Curl\+U\+RL}}
 \index{get\+Curl\+U\+RL@{get\+Curl\+U\+RL}!Curl\+Handler@{Curl\+Handler}}
@@ -131,9 +125,6 @@ This function returns current time.
 \begin{DoxyReturn}{Returns}
 int with hour and minutes in following format\+: H\+H\+MM 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}\label{classCurlHandler_af36e06319f16a97938bfb9a2ee8c0fa6}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Date@{get\+Date}}
 \index{get\+Date@{get\+Date}!Curl\+Handler@{Curl\+Handler}}
@@ -147,9 +138,6 @@ This function returns current date.
 \begin{DoxyReturn}{Returns}
 String with date in following format\+: Y\+Y\+Y\+Y\+M\+M\+DD 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_a021967e447f8980a4629b85cc3683a93}\label{classCurlHandler_a021967e447f8980a4629b85cc3683a93}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Date\+Field@{get\+Date\+Field}}
 \index{get\+Date\+Field@{get\+Date\+Field}!Curl\+Handler@{Curl\+Handler}}
@@ -163,9 +151,6 @@ This function creates Date part of the curl request U\+RL.
 \begin{DoxyReturn}{Returns}
 String with date in following format\+: data=Y\+Y\+Y\+Y\+M\+M\+DD\& 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}\label{classCurlHandler_a43b8d7b4ec2866c34820baa71236a15a}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Free\+From@{get\+Free\+From}}
 \index{get\+Free\+From@{get\+Free\+From}!Curl\+Handler@{Curl\+Handler}}
@@ -209,11 +194,8 @@ Needs a Room\+ID
 This function retrieves \& parses json. 
 
 \begin{DoxyReturn}{Returns}
-none 
+Lesson info 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}\label{classCurlHandler_acd45a047ecf8bad0977f8e890914a59a}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Lesson\+Teachers@{get\+Lesson\+Teachers}}
 \index{get\+Lesson\+Teachers@{get\+Lesson\+Teachers}!Curl\+Handler@{Curl\+Handler}}
@@ -227,9 +209,6 @@ This function gets the teachers from a lesson.
 \begin{DoxyReturn}{Returns}
 String with teacher(s) of a lesson 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}\label{classCurlHandler_aa62b036298bc0ca7365cb32919996a54}} 
 \index{Curl\+Handler@{Curl\+Handler}!get\+Lesson\+Time@{get\+Lesson\+Time}}
 \index{get\+Lesson\+Time@{get\+Lesson\+Time}!Curl\+Handler@{Curl\+Handler}}
@@ -243,9 +222,6 @@ This function gets the end\+Time of a lesson and returns lessontime.
 \begin{DoxyReturn}{Returns}
 String with lesson times in following format\+: HH\+:MM -\/ HH\+:MM 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}\label{classCurlHandler_af6808f78b075e81747be9ff5c19a8b61}} 
 \index{Curl\+Handler@{Curl\+Handler}!move\+Lesson\+Times@{move\+Lesson\+Times}}
 \index{move\+Lesson\+Times@{move\+Lesson\+Times}!Curl\+Handler@{Curl\+Handler}}
@@ -273,11 +249,11 @@ moves until given lesson;
 Outputs Lesson info in used format. 
 
 \begin{DoxyReturn}{Returns}
-none 
+The lesson information in the format accepted by the module 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Rick Overhorst 
+\end{DoxyAuthor}
 \mbox{\Hypertarget{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}\label{classCurlHandler_a2e63afaaf3fd64263505f90821f02d05}} 
 \index{Curl\+Handler@{Curl\+Handler}!parse\+Json@{parse\+Json}}
 \index{parse\+Json@{parse\+Json}!Curl\+Handler@{Curl\+Handler}}
@@ -291,9 +267,6 @@ This function parses json and saves lesson data.
 \begin{DoxyReturn}{Returns}
 none 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 \mbox{\Hypertarget{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}\label{classCurlHandler_aff816fc825c4ad52b377c808a900d07d}} 
 \index{Curl\+Handler@{Curl\+Handler}!Write\+Callback@{Write\+Callback}}
 \index{Write\+Callback@{Write\+Callback}!Curl\+Handler@{Curl\+Handler}}
@@ -305,11 +278,8 @@ none
 This function is used by curl\+Request as Write\+Callback. 
 
 \begin{DoxyReturn}{Returns}
-
+memmory size 
 \end{DoxyReturn}
-\begin{DoxyNote}{Note}
-
-\end{DoxyNote}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

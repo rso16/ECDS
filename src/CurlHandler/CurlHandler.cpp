@@ -18,7 +18,6 @@ void CurlHandler::setClassId(int id)
 /**
 * @brief This function retrieves & parses json
 * @returns Lesson info
-* @note
 */
 char* CurlHandler::getLessonInfo(int classID){
  	setClassId(classID);	
@@ -63,8 +62,7 @@ std::string CurlHandler::curlRequest(int ID){
 
 /**
 * @brief This function is used by curlRequest as WriteCallback
-* @returns 
-* @note
+* @returns memmory size 
 */
 size_t CurlHandler::WriteCallback(void *contents, size_t size, size_t nmemb, void *userp){
 	((std::string*)userp)->append((char*)contents, size * nmemb);
@@ -86,7 +84,6 @@ std::string CurlHandler::getCurlURL(int ID){
 /**
 * @brief This function creates Date part of the curl request URL.
 * @returns String with date in following format: data=YYYYMMDD&
-* @note
 */
 std::string CurlHandler::getDateField(){
 	std::ostringstream streamDate;
@@ -98,7 +95,6 @@ std::string CurlHandler::getDateField(){
 /**
 * @brief This function returns current date.
 * @returns String with date in following format: YYYYMMDD
-* @note
 */
 std::string CurlHandler::getDate(){
 	time_t t = time(NULL);
@@ -124,7 +120,6 @@ std::string CurlHandler::getIdField(int ID){
 /**
 * @brief This function parses json and saves lesson data
 * @returns none
-* @note
 */
 void CurlHandler::parseJson(std::string* buffer){
 	int lessonId;
@@ -170,7 +165,6 @@ void CurlHandler::parseJson(std::string* buffer){
 /**
 * @brief This function returns current time
 * @returns int with hour and minutes in following format: HHMM
-* @note
 */
 int CurlHandler::getCurrentTime(){
 	time_t t = time(NULL);
@@ -199,7 +193,6 @@ void CurlHandler::moveLessonTimes(int lesson){
 /**
 * @brief This function gets the endTime of a lesson and returns lessontime
 * @returns String with lesson times in following format: HH:MM - HH:MM
-* @note
 */
 std::string CurlHandler::getLessonTime(Json::Value obj, int lessonId, int lesson){
 	const Json::Value& characters = obj["result"]["data"]["elementPeriods"][std::to_string(ClassID)]; // array of characters
@@ -225,7 +218,6 @@ std::string CurlHandler::getLessonTime(Json::Value obj, int lessonId, int lesson
 /**
 * @brief This function merges startTime & endTime String into single formatted string
 * @returns String with lesson times in following format: HH:MM - HH:MM
-* @note
 */
 std::string CurlHandler::formatFullTime(std::string startTime, std::string endTime){
 	std::ostringstream lessonTimeStream;	
@@ -236,7 +228,6 @@ std::string CurlHandler::formatFullTime(std::string startTime, std::string endTi
 /**
 * @brief This function adds : to time string HHMM -> HH:MM
 * @returns String with times in following format: HH:MM
-* @note
 */
 std::string CurlHandler::formatTime(std::string time){
 	std::ostringstream timeStream;
@@ -249,7 +240,6 @@ std::string CurlHandler::formatTime(std::string time){
 /**
 * @brief This function gets the teachers from a lesson
 * @returns String with teacher(s) of a lesson
-* @note
 */
 std::string CurlHandler::getLessonTeachers(Json::Value obj, int i){
 	std::string teachers;
@@ -305,8 +295,8 @@ void CurlHandler::getFreeFrom(){
 
 /**
 * @brief Outputs Lesson info in used format
-* @returns none
-* @note
+* @returns The lesson information in the format accepted by the module
+* @author Rick Overhorst
 */
 char *CurlHandler::outputInfo(){
 	char *ret = (char *) malloc(sizeof(char) * BUFFER_SIZE);
