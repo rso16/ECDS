@@ -30,12 +30,12 @@ int main(int argc, const char* argv[])
 		
 		//get roomId
 		int roomId = eHandler.getRoomId(MAC_Addr);
-	
+		printf("roomId = %d\n", roomId);	
 		if(roomId != NULL)
 		{
 
 			//get lesson info and send it
-			server.sendData(cHandler.getLessonInfo(roomId));
+			server.sendData("T4.16;College Lokaal;11:30 - 13:30;Project Bespreking;Man de, Sjoerd (MNS02);14:30 - 16:30;Research and Development;Witsenburg, Tijn (WGM06);vrijvanaf 13:30 tot 14:30;");
 		}
 		else
 		{
